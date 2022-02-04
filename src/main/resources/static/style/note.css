@@ -1,0 +1,55 @@
+.main {
+    padding: 50px 150px 0 150px;
+    color: rgba(0,0,0,0.8);
+}
+
+.main div {
+    display: grid;
+    grid-template-columns: 70% repeat(3, 10%);
+
+    justify-items: end;
+
+    margin-bottom: 20px;
+}
+
+div button {
+    border-radius: 50%;
+
+    border: none;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+
+    font-size: 35px;
+    cursor: pointer;
+}
+
+div h1 {
+    font-size: 35px;
+    margin: 0;
+    min-height: 50px;
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+p {
+    margin: 0;
+
+    font-size: 20px;
+
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.back {
+    position: absolute;
+    font-size: 40px;
+    text-decoration: none;
+
+    color: rgba(0,0,0,0.8);
+
+    top: 5%;
+    left: 5%;
+}

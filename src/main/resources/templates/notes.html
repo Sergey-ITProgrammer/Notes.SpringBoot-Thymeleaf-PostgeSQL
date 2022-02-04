@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+
+    <link rel="stylesheet" href="/static/style/notes.css" th:href="@{/style/notes.css}"/>
+</head>
+    <body>
+        <div>
+            <form th:action="@{/notes/search}" method="GET">
+                <input type="search" placeholder="Search by title" th:name="flag" th:value="${flag}">
+
+                <input type="submit" value="Search">
+            </form>
+
+            <h1>
+                <a th:href="@{/notes}">
+                    Notes
+                </a>
+            </h1>
+
+            <a th:href="@{/notes/new}">+</a>
+        </div>
+
+        <ls th:each="note: ${notes}">
+            <a th:href="@{'/notes/' + ${note.id}}">
+                <il th:text="${note.title}"></il>
+            </a>
+        </ls>
+
+        <h2 th:if="${#lists.isEmpty(notes)}">
+            List is empty!
+        </h2>
+    </body>
+</html>

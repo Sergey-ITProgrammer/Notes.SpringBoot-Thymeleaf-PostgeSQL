@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${note.title}"></title>
+
+    <link rel="stylesheet" href="/static/style/note.css" th:href="@{/style/note.css}"/>
+</head>
+    <body>
+        <div class="main">
+            <div>
+                <h1 th:text="${note.title}"></h1>
+
+                <snap th:text="${note.timeOfCreation}"></snap>
+
+                <a th:href="@{'/notes/' + ${note.id} + '/change'}">
+                    <button>&#128394</button>
+                </a>
+                <form action="/notes/delete" th:object="${note}" method="post">
+                    <input type="hidden" th:field="*{id}"/>
+                    <button type="submit">&#128465</button>
+                </form>
+            </div>
+
+            <p th:text="${note.text}"></p>
+        </div>
+
+        <a th:href="@{/notes}" class="back">
+            &#8598
+        </a>
+    </body>
+</html>

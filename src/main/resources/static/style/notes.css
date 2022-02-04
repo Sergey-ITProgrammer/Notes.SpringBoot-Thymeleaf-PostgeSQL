@@ -1,0 +1,85 @@
+body {
+    padding: 0 50px;
+    color: rgba(0,0,0,0.8);
+}
+
+div {
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    justify-items: center;
+    align-items: center;
+}
+
+div form {
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    align-items: center;
+}
+
+div form input[type="search"] {
+    border: 2px solid rgba(0,0,0,0.8);
+    border-radius: 10px;
+    padding: 0 5px;
+
+    font-size: 20px;
+
+    align-self: end;
+}
+
+div form input[type="search"]:focus {
+    background-color: rgba(0,0,0,0.1);
+}
+
+div form input[type="submit"] {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+}
+
+div h1 {
+    font-size: 50px;
+}
+
+h1 a {
+    color: rgba(0,0,0,0.8);
+}
+
+div a {
+    font-size: 60px;
+    color: rgba(0,0,0,0.8);
+    text-decoration: none;
+}
+
+h2 {
+    display: grid;
+    justify-content: center;
+}
+
+ls {
+    display: grid;
+    align-items: center;
+
+    grid-template-rows: 150px;
+}
+
+ls a {
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 50px;
+
+    color: white;
+    font-size: 35px;
+    text-decoration: none;
+
+    padding: 30px;
+    margin-bottom: 30px;
+
+    overflow-x: auto;
+}

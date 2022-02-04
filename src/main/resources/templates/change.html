@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Change note</title>
+    <link rel="stylesheet" href="/static/style/change.css" th:href="@{/style/change.css}"/>
+</head>
+<body>
+    <h1>
+        Change note
+    </h1>
+
+    <form th:action="@{'/notes/' + ${note.id} + '/change'}" th:object="${note}" method="POST">
+        <textarea type="text" th:field="*{title}" maxlength="50" placeholder="Title" th:text="${note.title}" />
+
+        <textarea type="text" th:field="*{text}" placeholder="Text" class="text" th:text="${note.text}"/>
+
+        <div>
+            <input type="submit" value="Change" />
+            <input type="reset" value="Reset" />
+        </div>
+    </form>
+
+    <a th:href="@{'/notes/' + ${note.id}}" class="back">
+        &#8598
+    </a>
+</body>
+</html>
