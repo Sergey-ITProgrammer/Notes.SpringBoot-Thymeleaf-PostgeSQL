@@ -9,7 +9,4 @@ import java.util.List;
 @Repository
 public interface NotesRepository extends JpaRepository<Note, Long> {
     List<Note> findByTitleContainingIgnoreCase(String flag);
-    List<Note> findByTextContainingIgnoreCase(String flag);
-
-    List<Note> findByTitleOrTextContainingIgnoreCase(String flag, String flag1);
 }

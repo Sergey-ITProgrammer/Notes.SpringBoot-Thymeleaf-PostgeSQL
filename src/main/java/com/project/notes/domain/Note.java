@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+@NoArgsConstructor
 @Entity
 @Table(name = "notes")
 public class Note {
@@ -16,7 +17,7 @@ public class Note {
     private Long id;
 
     @Getter
-    private String timeOfCreation;
+    private LocalDateTime timeOfCreation;
 
     @Getter
     private Boolean isModified = false;
@@ -30,17 +31,20 @@ public class Note {
     @Type(type = "org.hibernate.type.TextType")
     private String text;
 
-    public Note() {}
-
     public Note(String title, String text) {
         this.title = title;
         this.text = text;
-        this.timeOfCreation = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        this.timeOfCreation = LocalDateTime.now();
     }
 
     public void setModified() {
         this.isModified = true;
-        this.timeOfCreation = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + " (modified)";
+        this.timeOfCreation = LocalDateTime.now();
     }
 
+    public String getTimeToString() {
+        String time = timeOfCreation.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+
+        return time;
+    }
 }

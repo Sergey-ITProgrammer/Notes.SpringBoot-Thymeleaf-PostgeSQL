@@ -8,6 +8,7 @@
     grid-template-columns: 70% repeat(3, 10%);
 
     justify-items: end;
+    gap: 5px;
 
     margin-bottom: 20px;
 }
@@ -48,8 +49,16 @@ p {
     font-size: 40px;
     text-decoration: none;
 
-    color: rgba(0,0,0,0.8);
+    color: rgb(138, 23, 23);
 
     top: 5%;
     left: 5%;
+}
+
+.modified {
+    position: absolute;
+    color: rgb(138, 23, 23);
+
+    top: 20px;
+    left: 70%;
 }

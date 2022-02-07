@@ -34,7 +34,7 @@ div form input[type="search"]:focus {
 }
 
 div form input[type="submit"] {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgb(138, 23, 23);
     color: white;
     border-radius: 50px;
     cursor: pointer;
@@ -54,7 +54,7 @@ h1 a {
 
 div a {
     font-size: 60px;
-    color: rgba(0,0,0,0.8);
+    color: rgb(138, 23, 23);
     text-decoration: none;
 }
 
@@ -71,7 +71,7 @@ ls {
 }
 
 ls a {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgb(138, 23, 23);
     border-radius: 50px;
 
     color: white;

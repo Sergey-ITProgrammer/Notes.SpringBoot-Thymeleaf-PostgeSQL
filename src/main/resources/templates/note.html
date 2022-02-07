@@ -9,9 +9,13 @@
     <body>
         <div class="main">
             <div>
+                <snap th:if="${note.isModified}" class="modified">
+                    (modified)
+                </snap>
+
                 <h1 th:text="${note.title}"></h1>
 
-                <snap th:text="${note.timeOfCreation}"></snap>
+                <snap th:text="${note.getTimeToString()}"></snap>
 
                 <a th:href="@{'/notes/' + ${note.id} + '/change'}">
                     <button>&#128394</button>
